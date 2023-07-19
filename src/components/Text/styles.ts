@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import { TextProps } from '.'
+import { Slot } from '@radix-ui/react-slot'
 
 const sizes = {
   'text-sm': () => css`
@@ -59,7 +60,7 @@ const weights = {
     font-weight: 400;
   `,
 }
-export const Container = styled.h1<TextProps>`
+export const Container = styled(Slot)<TextProps>`
   ${({ size, weight }) => css`
     font-style: normal;
     ${sizes[size]}

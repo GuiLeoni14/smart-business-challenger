@@ -27,4 +27,4 @@ export default {
     'zinc-400': '#CBD6E2',
     'zinc-100': '#F2F5FC',
   },
-}
+} as const
