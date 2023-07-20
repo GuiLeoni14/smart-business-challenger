@@ -40,7 +40,7 @@ const sizes = {
     line-height: 9rem;
   `,
   'text-7xl': () => css`
-    font-size: 8.8;
+    font-size: 8.8rem;
     line-height: 11rem;
   `,
   'text-8xl': () => css`

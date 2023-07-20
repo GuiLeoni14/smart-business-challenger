@@ -1,10 +1,3 @@
-import { Header } from '../layout/Header'
+import { Home } from './home'
 
-export default function Home() {
-  return (
-    <>
-      <Header />
-      <div>Home</div>
-    </>
-  )
-}
+export default Home
