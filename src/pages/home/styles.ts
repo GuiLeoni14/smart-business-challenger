@@ -207,3 +207,89 @@ export const AboutContent = styled(MainContainer)`
     bottom: 0;
   }
 `
+
+export const Brands = styled.div`
+  background-color: ${({ theme }) => theme.colors['zinc-100']};
+  padding: 4.6rem 0rem;
+`
+
+export const BrandsContent = styled(MainContainer)`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  img {
+    width: auto;
+    height: auto;
+  }
+`
+export const Steps = styled.div`
+  padding: 12rem 0rem;
+`
+
+export const StepsContent = styled(MainContainer)`
+  & > span:first-of-type {
+    color: ${({ theme }) => theme.colors['blue-500']};
+  }
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 13.6rem;
+    margin-top: 1.6rem;
+    & > .left {
+      & > h2 {
+        font-size: 4.8rem;
+        line-height: 6rem;
+      }
+      & > div {
+        margin-top: 8.2rem;
+        display: flex;
+        align-items: end;
+        justify-content: end;
+        gap: 3rem;
+      }
+    }
+    & > .right {
+      width: 100%;
+      max-width: 45.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 6.5rem;
+      position: relative;
+      & > svg {
+        z-index: 9;
+        position: absolute;
+        left: 30px;
+        top: 68px;
+        bottom: 0;
+      }
+      .step {
+        display: flex;
+        align-items: center;
+        gap: 2.4rem;
+        &:last-child {
+          margin-left: -0.5rem;
+        }
+        & > span {
+          display: block;
+          position: relative;
+          background-color: #fff;
+          z-index: 10;
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
+          border: 2px solid #cbd6e2;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: ${({ theme }) => theme.colors['blue-500']};
+        }
+        & > div {
+          display: flex;
+          flex-direction: column;
+          gap: 0.4rem;
+        }
+      }
+    }
+  }
+`
