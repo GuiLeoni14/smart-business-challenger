@@ -3,6 +3,7 @@ import { MainContainer } from '../../styles/container'
 
 export const Container = styled.div`
   padding-top: 40px;
+  background-color: ${({ theme }) => theme.colors['zinc-100']};
 `
 
 export const Content = styled(MainContainer)`
