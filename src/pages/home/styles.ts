@@ -12,7 +12,7 @@ export const Hero = styled.div`
 export const HeroContent = styled(MainContainer)`
   display: flex;
   position: relative;
-  div.right {
+  div.left {
     width: 100%;
     max-width: 71.4rem;
     h1 {
@@ -59,7 +59,7 @@ export const HeroContent = styled(MainContainer)`
     }
   }
 
-  .left {
+  div.right {
     position: absolute;
     width: 50%;
     height: 100%;
@@ -84,6 +84,72 @@ export const HeroContent = styled(MainContainer)`
           bottom: 0%;
         }
       }
+    }
+  }
+`
+
+export const Results = styled.div`
+  padding: 7.6rem 0rem;
+  background-color: ${({ theme }) => theme.colors['blue-500']};
+  position: relative;
+  overflow: hidden;
+  & > img {
+    position: absolute;
+    &:first-of-type {
+      top: -10px;
+      left: 0;
+    }
+    &:last-of-type {
+      bottom: -20px;
+      right: 0;
+    }
+  }
+`
+
+export const ResultsContent = styled(MainContainer)`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  & > .left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    width: 100%;
+    max-width: 37.8rem;
+    & > div:last-child {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      .icon {
+        border-radius: 50%;
+        background-color: ${({ theme }) => theme.colors['yellow-500']};
+      }
+      .text {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  & > .right {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    & > div.top {
+      display: flex;
+      align-items: center;
+      gap: 5.6rem;
+      & > div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+    }
+    & > div.line {
+      height: 2px;
+      width: 100%;
+      max-width: 3.8rem;
+      background-color: #97a5ff;
     }
   }
 `
