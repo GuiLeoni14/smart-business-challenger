@@ -293,3 +293,47 @@ export const StepsContent = styled(MainContainer)`
     }
   }
 `
+
+export const Blog = styled.div`
+  padding: 12rem 0rem;
+  background-color: ${({ theme }) => theme.colors['zinc-100']};
+`
+
+export const BlogContent = styled(MainContainer)`
+  & > div.top {
+    display: flex;
+    justify-content: space-between;
+    & > div:first-of-type {
+      width: 100%;
+      max-width: 41.1rem;
+      & > span:first-of-type {
+        color: ${({ theme }) => theme.colors['blue-500']};
+      }
+      & > h2 {
+        font-size: 4.8rem;
+        line-height: 6rem;
+        margin-top: 1.2rem;
+      }
+    }
+    & > a {
+      align-self: flex-end;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: underline;
+      color: ${({ theme }) => theme.colors['gray-700']};
+    }
+    & > div:last-of-type {
+      align-self: flex-end;
+      display: flex;
+      align-items: center;
+      gap: 3.3rem;
+    }
+  }
+  & > div.posts {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3.3rem;
+  }
+`

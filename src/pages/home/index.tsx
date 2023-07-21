@@ -7,6 +7,7 @@ import { Results } from './Results'
 import { About } from './About'
 import { Brands } from './Brands'
 import { Steps } from './Steps'
+import { Blog } from './Blog'
 
 export function Home() {
   return (
@@ -18,6 +19,7 @@ export function Home() {
         <About />
         <Brands />
         <Steps />
+        <Blog />
       </S.Container>
     </>
   )

@@ -34,7 +34,7 @@ export function Header() {
               <path
                 d="M0.333313 5.5H11M11 5.5L6.99998 1.5M11 5.5L6.99998 9.5"
                 stroke="#1D63FF"
-                stroke-width="1.5"
+                strokeWidth="1.5"
               />
             </svg>
           </Link>
