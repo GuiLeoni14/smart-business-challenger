@@ -337,3 +337,69 @@ export const BlogContent = styled(MainContainer)`
     gap: 3.3rem;
   }
 `
+
+export const Question = styled.div`
+  padding: 12rem 0rem;
+`
+
+export const QuestionContent = styled(MainContainer)`
+  & > .left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    max-width: 41.1rem;
+    & > span:first-of-type {
+      color: ${({ theme }) => theme.colors['blue-500']};
+    }
+    & > h2 {
+      font-size: 4.8rem;
+      line-height: 6rem;
+      margin-top: 1.6rem;
+    }
+    & > p {
+      margin-top: 1.6rem;
+    }
+    & > a:first-of-type {
+      margin-top: 4rem;
+    }
+    & > span:last-of-type {
+      margin-top: 2.6rem;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+  }
+  & > .right {
+    & > .accordion {
+      .accordion-trigger {
+        display: flex;
+        align-items: center;
+        gap: 2.4rem;
+        height: 11.2rem;
+        cursor: pointer;
+        & > span:first-of-type {
+          color: ${({ theme }) => theme.colors['blue-500']};
+        }
+        svg {
+          margin-left: auto;
+        }
+        &[data-state='closed'] {
+          border-bottom: 2px solid #cbd6e2;
+        }
+        &[data-state='open'] {
+          svg {
+            path:first-child {
+              display: none;
+            }
+          }
+        }
+      }
+      .accordion-content {
+        padding-bottom: 3.6rem;
+        border-bottom: 2px solid #cbd6e2;
+        transition: all 0.2s;
+      }
+    }
+  }
+`

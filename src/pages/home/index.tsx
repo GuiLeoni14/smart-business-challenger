@@ -8,6 +8,7 @@ import { About } from './About'
 import { Brands } from './Brands'
 import { Steps } from './Steps'
 import { Blog } from './Blog'
+import { Question } from './Question'
 
 export function Home() {
   return (
@@ -20,6 +21,7 @@ export function Home() {
         <Brands />
         <Steps />
         <Blog />
+        <Question />
       </S.Container>
     </>
   )
