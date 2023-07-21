@@ -343,62 +343,85 @@ export const Question = styled.div`
 `
 
 export const QuestionContent = styled(MainContainer)`
-  & > .left {
+  & > .top {
     display: flex;
-    flex-direction: column;
-    align-items: start;
-    width: 100%;
-    max-width: 41.1rem;
-    & > span:first-of-type {
-      color: ${({ theme }) => theme.colors['blue-500']};
-    }
-    & > h2 {
-      font-size: 4.8rem;
-      line-height: 6rem;
-      margin-top: 1.6rem;
-    }
-    & > p {
-      margin-top: 1.6rem;
-    }
-    & > a:first-of-type {
-      margin-top: 4rem;
-    }
-    & > span:last-of-type {
-      margin-top: 2.6rem;
+    justify-content: space-between;
+    & > .left {
       display: flex;
-      align-items: center;
-      gap: 1.2rem;
-    }
-  }
-  & > .right {
-    & > .accordion {
-      .accordion-trigger {
+      flex-direction: column;
+      align-items: start;
+      width: 100%;
+      max-width: 41.1rem;
+      & > span:first-of-type {
+        color: ${({ theme }) => theme.colors['blue-500']};
+      }
+      & > h2 {
+        font-size: 4.8rem;
+        line-height: 6rem;
+        margin-top: 1.6rem;
+      }
+      & > p {
+        margin-top: 1.6rem;
+      }
+      & > a:first-of-type {
+        margin-top: 4rem;
+      }
+      & > span:last-of-type {
+        margin-top: 2.6rem;
         display: flex;
         align-items: center;
-        gap: 2.4rem;
-        height: 11.2rem;
-        cursor: pointer;
-        & > span:first-of-type {
-          color: ${({ theme }) => theme.colors['blue-500']};
-        }
-        svg {
-          margin-left: auto;
-        }
-        &[data-state='closed'] {
-          border-bottom: 2px solid #cbd6e2;
-        }
-        &[data-state='open'] {
+        gap: 1.2rem;
+      }
+    }
+    & > .right {
+      width: 100%;
+      max-width: 69.6rem;
+      & > .accordion {
+        .accordion-trigger {
+          display: flex;
+          align-items: center;
+          gap: 2.4rem;
+          height: 11.2rem;
+          cursor: pointer;
+          & > span:first-of-type {
+            color: ${({ theme }) => theme.colors['blue-500']};
+          }
           svg {
-            path:first-child {
-              display: none;
+            margin-left: auto;
+          }
+          &[data-state='closed'] {
+            border-bottom: 2px solid #cbd6e2;
+          }
+          &[data-state='open'] {
+            svg {
+              path:first-child {
+                display: none;
+              }
             }
           }
         }
+        .accordion-content {
+          padding-bottom: 3.6rem;
+          border-bottom: 2px solid #cbd6e2;
+          transition: all 0.2s;
+        }
       }
-      .accordion-content {
-        padding-bottom: 3.6rem;
-        border-bottom: 2px solid #cbd6e2;
-        transition: all 0.2s;
+    }
+  }
+  & > .bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.2rem;
+    margin-top: 7.2rem;
+    & > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: ${({ theme }) => theme.colors['zinc-100']};
+      padding: 6rem 0rem;
+      & > strong:first-of-type {
+        margin: 2.4rem 0rem 0.4rem 0rem;
       }
     }
   }
