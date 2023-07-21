@@ -426,3 +426,59 @@ export const QuestionContent = styled(MainContainer)`
     }
   }
 `
+
+export const Newsletter = styled.div`
+  background: url('/img/bg_news.png') no-repeat center center;
+  background-size: cover;
+  padding: 9rem 0rem;
+`
+
+export const NewsletterContent = styled(MainContainer)`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
+  text-align: center;
+  & > span:first-of-type {
+    color: ${({ theme }) => theme.colors['blue-500']};
+  }
+  p {
+    margin-top: 0.8rem;
+  }
+  & > form {
+    display: flex;
+    width: 100%;
+    max-width: 48.8rem;
+    height: 7.2rem;
+    position: relative;
+    margin-top: 3.5rem;
+    input {
+      width: 100%;
+      height: 100%;
+      padding-left: 5.2rem;
+      &::placeholder {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 2.4rem;
+      }
+    }
+
+    img {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    button {
+      position: absolute;
+      cursor: pointer;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+`

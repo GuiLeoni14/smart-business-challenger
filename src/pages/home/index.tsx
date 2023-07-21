@@ -9,6 +9,7 @@ import { Brands } from './Brands'
 import { Steps } from './Steps'
 import { Blog } from './Blog'
 import { Question } from './Question'
+import { Newsletter } from './Newsletter'
 
 export function Home() {
   return (
@@ -22,6 +23,7 @@ export function Home() {
         <Steps />
         <Blog />
         <Question />
+        <Newsletter />
       </S.Container>
     </>
   )
