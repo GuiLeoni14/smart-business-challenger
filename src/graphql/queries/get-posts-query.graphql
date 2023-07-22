@@ -1,0 +1,13 @@
+query getPosts(
+  $where: PostWhereInput
+  $orderBy: PostOrderByInput
+  $first: Int
+  $skip: Int
+  $last: Int
+  $after: String
+  $before: String
+) {
+  posts(orderBy: $orderBy, first: $first, skip: $skip, where: $where, last: $last, after: $after, before: $before) {
+    ...post
+  }
+}

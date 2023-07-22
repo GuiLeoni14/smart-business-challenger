@@ -1,0 +1,10 @@
+fragment post on Post {
+  title
+  slug
+  tag
+  date
+  excerpt
+  content {
+    html
+  }
+}

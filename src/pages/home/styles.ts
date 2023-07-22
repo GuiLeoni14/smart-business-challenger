@@ -328,13 +328,24 @@ export const BlogContent = styled(MainContainer)`
       display: flex;
       align-items: center;
       gap: 3.3rem;
+      img {
+        cursor: pointer;
+      }
     }
   }
   & > div.posts {
     margin-top: 4rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 3.3rem;
+    & > div {
+      padding-bottom: 7.8rem;
+      .swiper-pagination-bullet {
+        background-color: ${({ theme }) => theme.colors['blue-500']};
+        opacity: 1;
+      }
+      .swiper-pagination-bullet-active {
+        background-color: transparent;
+        border: 2px solid ${({ theme }) => theme.colors['blue-500']};
+      }
+    }
   }
 `
 

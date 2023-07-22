@@ -1,0 +1,7 @@
+schema: https://api-sa-east-1.hygraph.com/v2/clkda6gq357zd01urfymvbgsr/master
+documents: './src/graphql/**/*.graphql'
+generates:
+  ./src/graphql/generated.ts:
+    plugins:
+      - typescript
+      - typescript-operations

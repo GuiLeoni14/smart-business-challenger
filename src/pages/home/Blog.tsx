@@ -3,8 +3,21 @@ import { Text } from '../../components/Text'
 import * as S from './styles'
 import Image from 'next/image'
 import { PostCard } from '../../components/PostCard'
+import { Autoplay, Navigation, Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { usePosts } from '../../hooks/fetch/usePosts'
 
 export function Blog() {
+  const { data: posts } = usePosts({
+    identifier: ['blog-section'],
+    variables: {
+      first: 8,
+    },
+  })
+
   return (
     <S.Blog>
       <S.BlogContent>
@@ -40,21 +53,60 @@ export function Blog() {
               src="/img/icons/icon_arrow_prev.svg"
               width={10}
               height={20}
+              id="prev"
               alt=""
             />
             <Image
               src="/img/icons/icon_arrow_next.svg"
               width={10}
               height={20}
+              id="next"
               alt=""
             />
           </div>
         </div>
         <div className="posts">
-          <PostCard />
-          <PostCard />
-          <PostCard />
-          <PostCard />
+          <Swiper
+            slidesPerView={4}
+            spaceBetween={33}
+            pagination={{ clickable: true }}
+            navigation={{
+              enabled: true,
+              nextEl: `#next`,
+              prevEl: `#prev`,
+            }}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 4,
+              },
+            }}
+            modules={[Autoplay, Navigation, Pagination]}
+            autoplay={{
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+              delay: 3000,
+            }}
+            className="mt-5"
+          >
+            {posts?.map((post) => {
+              return (
+                <SwiperSlide key={post.slug}>
+                  <PostCard
+                    title={post.title}
+                    slug={post.slug}
+                    date={post.date}
+                    tag={post.tag}
+                  />
+                </SwiperSlide>
+              )
+            })}
+          </Swiper>
         </div>
       </S.BlogContent>
     </S.Blog>
