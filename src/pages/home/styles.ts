@@ -1,3 +1,4 @@
+import { _FilterKind } from './../../graphql/generated'
 import styled from 'styled-components'
 import { MainContainer } from '../../styles/container'
 
@@ -106,6 +107,9 @@ export const HeroContent = styled(MainContainer)`
         justify-content: center;
         flex-direction: column;
       }
+      & > img:last-of-type {
+        display: none;
+      }
     }
     & > div.right {
       width: 100%;
@@ -113,6 +117,13 @@ export const HeroContent = styled(MainContainer)`
       & > div {
         width: 100%;
         min-height: 50rem;
+        & > img:first-of-type {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        img:nth-child(2) {
+          display: none;
+        }
       }
     }
   }
@@ -137,7 +148,6 @@ export const Results = styled.div`
 `
 
 export const ResultsContent = styled(MainContainer)`
-  color: #fff !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -147,6 +157,9 @@ export const ResultsContent = styled(MainContainer)`
     gap: 1.6rem;
     width: 100%;
     max-width: 37.8rem;
+    & > p {
+      color: #fff;
+    }
     & > div:last-child {
       display: flex;
       align-items: center;
@@ -158,6 +171,9 @@ export const ResultsContent = styled(MainContainer)`
       .text {
         display: flex;
         flex-direction: column;
+        strong {
+          color: #fff !important;
+        }
       }
     }
   }
@@ -173,6 +189,10 @@ export const ResultsContent = styled(MainContainer)`
         display: flex;
         flex-direction: column;
         gap: 0.6rem;
+        strong,
+        span {
+          color: #fff;
+        }
       }
     }
     & > div.line {
@@ -180,6 +200,9 @@ export const ResultsContent = styled(MainContainer)`
       width: 100%;
       max-width: 3.8rem;
       background-color: #97a5ff;
+    }
+    & > span {
+      color: #fff;
     }
   }
   ${({ theme }) => theme.media.lg} {
@@ -378,8 +401,7 @@ export const StepsContent = styled(MainContainer)`
           text-align: center;
         }
         & > div {
-          align-items: flex-end;
-          justify-content: center;
+          display: none;
         }
       }
     }
@@ -437,6 +459,31 @@ export const BlogContent = styled(MainContainer)`
         background-color: transparent;
         border: 2px solid ${({ theme }) => theme.colors['blue-500']};
       }
+    }
+  }
+  & > a {
+    text-align: center;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-decoration: underline;
+    color: ${({ theme }) => theme.colors['gray-700']};
+  }
+  ${({ theme }) => theme.media.lg} {
+    & > div.top {
+      & > div:first-of-type {
+        text-align: center;
+        max-width: 100%;
+      }
+      & > a,
+      & > div:last-of-type {
+        display: none;
+      }
+    }
+    & > a {
+      display: flex;
+      margin-top: 4rem;
     }
   }
 `
@@ -528,6 +575,27 @@ export const QuestionContent = styled(MainContainer)`
       }
     }
   }
+  ${({ theme }) => theme.media.lg} {
+    & > .top {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3.2rem;
+      & > .left {
+        text-align: center;
+        max-width: 100%;
+        align-items: center;
+        justify-content: center;
+      }
+      & > .right {
+        max-width: 100%;
+      }
+    }
+    & > .bottom {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
 `
 
 export const Newsletter = styled.div`
@@ -537,7 +605,6 @@ export const Newsletter = styled.div`
 `
 
 export const NewsletterContent = styled(MainContainer)`
-  color: #fff !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -549,19 +616,23 @@ export const NewsletterContent = styled(MainContainer)`
   & > span:first-of-type {
     color: ${({ theme }) => theme.colors['blue-500']};
   }
+  h2 {
+    color: #fff;
+  }
   p {
     margin-top: 0.8rem;
+    color: #fff;
   }
   & > form {
     display: flex;
     width: 100%;
     max-width: 48.8rem;
-    height: 7.2rem;
     position: relative;
+    height: auto;
     margin-top: 3.5rem;
     input {
+      height: 7.2rem;
       width: 100%;
-      height: 100%;
       padding-left: 5.2rem;
       &::placeholder {
         font-size: 16px;
@@ -582,6 +653,21 @@ export const NewsletterContent = styled(MainContainer)`
       right: 10px;
       top: 50%;
       transform: translateY(-50%);
+    }
+  }
+  ${({ theme }) => theme.media.lg} {
+    & > form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+      img {
+        top: 3.6rem;
+      }
+      button {
+        position: initial;
+        display: block;
+        transform: initial;
+      }
     }
   }
 `

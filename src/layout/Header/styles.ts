@@ -40,4 +40,11 @@ export const Content = styled(MainContainer)`
       }
     }
   }
+  ${({ theme }) => theme.media.lg} {
+    & > div {
+      a:last-child {
+        display: none;
+      }
+    }
+  }
 `
