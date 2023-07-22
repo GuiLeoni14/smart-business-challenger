@@ -27,4 +27,11 @@ export default {
     'zinc-400': '#CBD6E2',
     'zinc-100': '#F2F5FC',
   },
+  media: {
+    sm: `@media (max-width: 640px)`,
+    md: `@media (max-width: 768px)`,
+    lg: `@media (max-width: 1024px)`,
+    xl: `@media (max-width: 1280px)`,
+    '2xl': `@media (max-width: 1536px)`,
+  },
 } as const

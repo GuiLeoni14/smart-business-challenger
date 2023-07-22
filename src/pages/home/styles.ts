@@ -61,7 +61,7 @@ export const HeroContent = styled(MainContainer)`
 
   div.right {
     position: absolute;
-    width: 50%;
+    width: 100%;
     height: 100%;
     right: 0%;
     top: 0%;
@@ -73,16 +73,46 @@ export const HeroContent = styled(MainContainer)`
       img {
         position: absolute;
         &:first-child {
-          left: 40%;
+          left: 60%;
           top: 26%;
         }
         &:nth-child(2) {
           top: -17%;
+          right: 0%;
         }
         &:last-child {
           right: 0%;
           bottom: 0%;
         }
+      }
+    }
+  }
+
+  ${({ theme }) => theme.media.lg} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    & > div.left {
+      max-width: 100%;
+      & > span:first-of-type {
+        justify-content: center;
+      }
+      & > p {
+        max-width: 100%;
+      }
+      & > div:last-of-type {
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+    & > div.right {
+      width: 100%;
+      position: initial;
+      & > div {
+        width: 100%;
+        min-height: 50rem;
       }
     }
   }
@@ -107,7 +137,7 @@ export const Results = styled.div`
 `
 
 export const ResultsContent = styled(MainContainer)`
-  color: #fff;
+  color: #fff !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -152,6 +182,27 @@ export const ResultsContent = styled(MainContainer)`
       background-color: #97a5ff;
     }
   }
+  ${({ theme }) => theme.media.lg} {
+    flex-direction: column;
+    justify-content: center;
+    & > .left {
+      justify-content: center;
+      align-items: center;
+      & > p {
+        text-align: center;
+      }
+    }
+    & > .right {
+      margin-top: 5.6rem;
+      align-items: center;
+      & > .top {
+        flex-direction: column;
+        & > div {
+          align-items: center;
+        }
+      }
+    }
+  }
 `
 
 export const About = styled.div`
@@ -161,6 +212,7 @@ export const About = styled.div`
 export const AboutContent = styled(MainContainer)`
   display: flex;
   justify-content: space-between;
+  gap: 2.5rem;
   position: relative;
   & > div.left {
     width: 100%;
@@ -206,6 +258,22 @@ export const AboutContent = styled(MainContainer)`
     left: 0;
     bottom: 0;
   }
+  ${({ theme }) => theme.media.lg} {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    & > div.left {
+      max-width: 100%;
+      align-items: center;
+
+      & > img:last-of-type {
+        align-self: center;
+      }
+    }
+    & > img:last-of-type {
+      display: none;
+    }
+  }
 `
 
 export const Brands = styled.div`
@@ -221,6 +289,11 @@ export const BrandsContent = styled(MainContainer)`
   img {
     width: auto;
     height: auto;
+  }
+  ${({ theme }) => theme.media.lg} {
+    flex-direction: column;
+    gap: 5.4rem;
+    justify-content: center;
   }
 `
 export const Steps = styled.div`
@@ -273,7 +346,7 @@ export const StepsContent = styled(MainContainer)`
         & > span {
           display: block;
           position: relative;
-          background-color: #fff;
+          background-color: #fff !important;
           z-index: 10;
           width: 64px;
           height: 64px;
@@ -288,6 +361,25 @@ export const StepsContent = styled(MainContainer)`
           display: flex;
           flex-direction: column;
           gap: 0.4rem;
+        }
+      }
+    }
+  }
+  ${({ theme }) => theme.media.lg} {
+    & > span:first-of-type {
+      text-align: center;
+      display: block;
+    }
+    & > div {
+      flex-direction: column;
+      align-items: center;
+      & > .left {
+        & > h2 {
+          text-align: center;
+        }
+        & > div {
+          align-items: flex-end;
+          justify-content: center;
         }
       }
     }
@@ -445,7 +537,7 @@ export const Newsletter = styled.div`
 `
 
 export const NewsletterContent = styled(MainContainer)`
-  color: #fff;
+  color: #fff !important;
   display: flex;
   align-items: center;
   justify-content: center;

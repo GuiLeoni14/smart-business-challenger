@@ -23,7 +23,7 @@ export const Container = styled(Slot)<ButtonProps>`
     font-weight: 600;
     line-height: 2.7rem;
 
-    color: #fff;
+    color: #fff !important;
     background-color: ${({ theme }) => theme.colors['blue-500']};
   `}
 `

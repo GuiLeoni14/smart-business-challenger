@@ -6,18 +6,22 @@ const sizes = {
   'text-sm': () => css`
     font-size: 1.4rem;
     line-height: 2.1rem;
+    color: ${({ theme }) => theme.colors['gray-400']};
   `,
   'text-base': () => css`
     font-size: 1.6rem;
     line-height: 2.4rem;
+    color: ${({ theme }) => theme.colors['gray-700']};
   `,
   'text-lg': () => css`
     font-size: 1.8rem;
     line-height: 2.7rem;
+    color: ${({ theme }) => theme.colors['gray-300']};
   `,
   'text-xl': () => css`
     font-size: 2rem;
     line-height: 3rem;
+    color: ${({ theme }) => theme.colors['gray-400']};
   `,
   'text-2xl': () => css`
     font-size: 2.4rem;
@@ -42,6 +46,7 @@ const sizes = {
   'text-7xl': () => css`
     font-size: 8.8rem;
     line-height: 11rem;
+    color: ${({ theme }) => theme.colors['gray-700']};
   `,
   'text-8xl': () => css`
     font-size: 9.6;
