@@ -10,6 +10,7 @@ import { Steps } from './Steps'
 import { Blog } from './Blog'
 import { Question } from './Question'
 import { Newsletter } from './Newsletter'
+import { Footer } from '../../layout/Footer'
 
 export function Home() {
   return (
@@ -25,6 +26,7 @@ export function Home() {
         <Question />
         <Newsletter />
       </S.Container>
+      <Footer />
     </>
   )
 }
