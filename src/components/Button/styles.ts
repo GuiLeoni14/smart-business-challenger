@@ -25,5 +25,10 @@ export const Container = styled(Slot)<ButtonProps>`
 
     color: #fff !important;
     background-color: ${({ theme }) => theme.colors['blue-500']};
+
+    transition: all 0.2s;
+    &:hover {
+      opacity: 0.6;
+    }
   `}
 `

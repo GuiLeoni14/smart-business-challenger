@@ -2,12 +2,24 @@ import Image from 'next/image'
 import * as S from './styles'
 import { Text } from '../../components/Text'
 import Link from 'next/link'
+import { MainContainer } from '../../styles/container'
 
 export function Header() {
   return (
     <S.Container>
+      <S.Tarja>
+        <MainContainer>
+          <Text size="text-sm" weight="regular">
+            <a href="#">
+              Mês do digital, aproveite para{' '}
+              <span>fazer parte do SmartBusiness!</span>
+            </a>
+          </Text>
+        </MainContainer>
+      </S.Tarja>
       <S.Content>
         <Image src="/logo.svg" width={176} height={38} alt="logo" />
+        <Image src="/logo_mobile.svg" width={176} height={38} alt="logo" />
         <div>
           <Link href="/auth/signin">
             <Image

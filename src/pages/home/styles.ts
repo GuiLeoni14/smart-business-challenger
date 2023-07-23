@@ -9,7 +9,7 @@ export const Hero = styled.div`
   background-color: ${({ theme }) => theme.colors['zinc-100']};
   overflow: hidden;
   ${({ theme }) => theme.media.lg} {
-    padding: 9.684rem 0px 6rem 0px;
+    padding: 6rem 0px 6rem 0px;
   }
 `
 
@@ -19,6 +19,8 @@ export const HeroContent = styled(MainContainer)`
   div.left {
     width: 100%;
     max-width: 71.4rem;
+    position: relative;
+    z-index: 2020;
     h1 {
       margin-top: 1.6rem;
       span {
