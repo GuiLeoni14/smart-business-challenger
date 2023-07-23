@@ -8,6 +8,9 @@ export const Hero = styled.div`
   padding: 9.684rem 0px 12.642rem 0px;
   background-color: ${({ theme }) => theme.colors['zinc-100']};
   overflow: hidden;
+  ${({ theme }) => theme.media.lg} {
+    padding: 9.684rem 0px 6rem 0px;
+  }
 `
 
 export const HeroContent = styled(MainContainer)`
@@ -100,8 +103,20 @@ export const HeroContent = styled(MainContainer)`
       & > span:first-of-type {
         justify-content: center;
       }
+      & > h1 {
+        font-size: 3.2rem;
+        line-height: 4.16rem;
+        span {
+          &::after {
+            height: 3px;
+            bottom: 5px;
+          }
+        }
+      }
       & > p {
         max-width: 100%;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
       }
       & > div:last-of-type {
         justify-content: center;
@@ -143,6 +158,14 @@ export const Results = styled.div`
     &:last-of-type {
       bottom: -20px;
       right: 0;
+    }
+  }
+  ${({ theme }) => theme.media.lg} {
+    & > img {
+      &:last-of-type {
+        bottom: -100px;
+        right: -50px;
+      }
     }
   }
 `
@@ -212,6 +235,8 @@ export const ResultsContent = styled(MainContainer)`
       justify-content: center;
       align-items: center;
       & > p {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
         text-align: center;
       }
     }
@@ -222,7 +247,15 @@ export const ResultsContent = styled(MainContainer)`
         flex-direction: column;
         & > div {
           align-items: center;
+          strong {
+            font-size: 4rem;
+            line-height: 5rem;
+          }
         }
+      }
+      & > span {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
       }
     }
   }
@@ -230,6 +263,9 @@ export const ResultsContent = styled(MainContainer)`
 
 export const About = styled.div`
   padding: 12rem 0rem;
+  ${({ theme }) => theme.media.lg} {
+    padding: 6.4rem 0rem;
+  }
 `
 
 export const AboutContent = styled(MainContainer)`
@@ -288,7 +324,20 @@ export const AboutContent = styled(MainContainer)`
     & > div.left {
       max-width: 100%;
       align-items: center;
-
+      & > span:first-of-type {
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+      }
+      & > h2 {
+        font-size: 2.4rem;
+        line-height: 3rem;
+      }
+      & > div {
+        & > span {
+          font-size: 1.4rem;
+          line-height: 2.1rem;
+        }
+      }
       & > img:last-of-type {
         align-self: center;
       }
@@ -321,6 +370,9 @@ export const BrandsContent = styled(MainContainer)`
 `
 export const Steps = styled.div`
   padding: 12rem 0rem;
+  ${({ theme }) => theme.media.lg} {
+    padding: 6.4rem 0rem;
+  }
 `
 
 export const StepsContent = styled(MainContainer)`
@@ -384,6 +436,9 @@ export const StepsContent = styled(MainContainer)`
           display: flex;
           flex-direction: column;
           gap: 0.4rem;
+          & > strong {
+            color: ${({ theme }) => theme.colors['gray-700']};
+          }
         }
       }
     }
@@ -396,12 +451,33 @@ export const StepsContent = styled(MainContainer)`
     & > div {
       flex-direction: column;
       align-items: center;
+      gap: 4rem;
       & > .left {
         & > h2 {
           text-align: center;
+          font-size: 2.4rem;
+          line-height: 3rem;
         }
         & > div {
           display: none;
+        }
+      }
+      & > .right {
+        .step {
+          gap: 1.7rem;
+          & > span {
+            flex-shrink: 0;
+          }
+          & > div {
+            strong {
+              font-size: 1.6rem;
+              line-height: 2.4rem;
+            }
+            span {
+              font-size: 1.4rem;
+              line-height: 2.1rem;
+            }
+          }
         }
       }
     }
@@ -411,6 +487,9 @@ export const StepsContent = styled(MainContainer)`
 export const Blog = styled.div`
   padding: 12rem 0rem;
   background-color: ${({ theme }) => theme.colors['zinc-100']};
+  ${({ theme }) => theme.media.lg} {
+    padding: 6.4rem 0rem;
+  }
 `
 
 export const BlogContent = styled(MainContainer)`
@@ -475,6 +554,12 @@ export const BlogContent = styled(MainContainer)`
       & > div:first-of-type {
         text-align: center;
         max-width: 100%;
+        & > h2 {
+          font-size: 2.4rem;
+          line-height: 3rem;
+          max-width: 20.4rem;
+          margin: 1.6rem auto 0rem auto;
+        }
       }
       & > a,
       & > div:last-of-type {
@@ -490,6 +575,9 @@ export const BlogContent = styled(MainContainer)`
 
 export const Question = styled.div`
   padding: 12rem 0rem;
+  ${({ theme }) => theme.media.lg} {
+    padding: 6.4rem 0rem;
+  }
 `
 
 export const QuestionContent = styled(MainContainer)`
@@ -586,14 +674,39 @@ export const QuestionContent = styled(MainContainer)`
         max-width: 100%;
         align-items: center;
         justify-content: center;
+        & > h2 {
+          font-size: 2.4rem;
+          line-height: 3rem;
+        }
+        & > p {
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+        }
       }
       & > .right {
-        max-width: 100%;
+        & > .accordion {
+          .accordion-trigger {
+            & > span:last-of-type {
+              font-size: 1.6rem;
+              line-height: 2.4rem;
+            }
+          }
+          .accordion-content {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+          }
+        }
       }
     }
     & > .bottom {
       grid-template-columns: 1fr;
       text-align: center;
+      & > div {
+        & > strong:first-of-type {
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+        }
+      }
     }
   }
 `
@@ -602,6 +715,9 @@ export const Newsletter = styled.div`
   background: url('/img/bg_news.png') no-repeat center center;
   background-size: cover;
   padding: 9rem 0rem;
+  ${({ theme }) => theme.media.lg} {
+    padding: 6.4rem 0rem;
+  }
 `
 
 export const NewsletterContent = styled(MainContainer)`
@@ -656,6 +772,14 @@ export const NewsletterContent = styled(MainContainer)`
     }
   }
   ${({ theme }) => theme.media.lg} {
+    h2 {
+      font-size: 2.4rem;
+      line-height: 3rem;
+    }
+    p {
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+    }
     & > form {
       display: flex;
       flex-direction: column;

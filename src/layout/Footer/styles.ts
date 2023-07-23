@@ -18,7 +18,8 @@ export const Content = styled(MainContainer)`
   ${({ theme }) => theme.media.lg} {
     text-align: center;
     flex-direction: column;
-    max-width: 20rem;
+    max-width: 18em;
     margin: 0 auto;
+    padding: 0px;
   }
 `
