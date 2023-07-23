@@ -9,7 +9,7 @@ export function Header() {
       <S.Content>
         <Image src="/logo.svg" width={176} height={38} alt="logo" />
         <div>
-          <Link href="/signin">
+          <Link href="/auth/signin">
             <Image
               src="/img/icons/icon_user.svg"
               width={20}
@@ -20,7 +20,7 @@ export function Header() {
               <span>Acessar</span>
             </Text>
           </Link>
-          <Link href="/signin">
+          <Link href="/auth/signin">
             <Text size="text-sm" weight="semi">
               <span>Cadastre-se gratuitamente</span>
             </Text>
