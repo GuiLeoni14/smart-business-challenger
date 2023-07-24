@@ -9,9 +9,25 @@ import { Blog } from './Blog'
 import { Question } from './Question'
 import { Newsletter } from './Newsletter'
 import { Footer } from '../../layout/Footer'
+import AOS from 'aos'
 import Head from 'next/head'
+import { useEffect } from 'react'
 
 export function Home() {
+  useEffect(() => {
+    AOS.refresh()
+    AOS.init({
+      once: true,
+      duration: 600,
+      disable: 'mobile',
+      // eslint-disable-next-line
+    });
+
+    // eslint-disable-next-line
+    () => {
+      AOS.refresh()
+    }
+  }, [])
   return (
     <>
       <Head>
