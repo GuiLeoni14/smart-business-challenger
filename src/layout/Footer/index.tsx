@@ -11,7 +11,7 @@ export function Footer() {
           <span>© 2022 SmartBusiness. Todos os direitos reservados</span>
         </Text>
         <div>
-          <a href="http://" target="_blank" rel="noopener noreferrer">
+          <a href="#" target="_blank" rel="noopener noreferrer">
             <Image
               src="/img/icons/icon_twt.svg"
               width={32}
@@ -19,7 +19,7 @@ export function Footer() {
               alt="Icon"
             />
           </a>
-          <a href="http://" target="_blank" rel="noopener noreferrer">
+          <a href="#" target="_blank" rel="noopener noreferrer">
             <Image
               src="/img/icons/icon_lin.svg"
               width={32}
@@ -27,7 +27,7 @@ export function Footer() {
               alt="Icon"
             />
           </a>
-          <a href="http://" target="_blank" rel="noopener noreferrer">
+          <a href="#" target="_blank" rel="noopener noreferrer">
             <Image
               src="/img/icons/icon_insta.svg"
               width={32}
@@ -35,7 +35,7 @@ export function Footer() {
               alt="Icon"
             />
           </a>
-          <a href="http://" target="_blank" rel="noopener noreferrer">
+          <a href="#" target="_blank" rel="noopener noreferrer">
             <Image
               src="/img/icons/icon_face.svg"
               width={32}
@@ -47,7 +47,7 @@ export function Footer() {
         <Text size="text-sm" weight="regular">
           <span>
             Desenvolvido por{' '}
-            <a href="http://" target="_blank" rel="noopener noreferrer">
+            <a href="#" target="_blank" rel="noopener noreferrer">
               Guilherme Leoni
             </a>
           </span>
