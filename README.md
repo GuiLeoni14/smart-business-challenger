@@ -1,6 +1,6 @@
 # smart-business-challenger
 > Status: Completed ⚠️
-+ confira esse projeto online em: https://smart-business-challenger.vercel.app
++ Confira esse projeto online em: https://smart-business-challenger.vercel.app
 
 ## Objetivo:
 + Desenvolver uma landing page utilizando Nextjs + styled components + CMS.
@@ -16,5 +16,6 @@
     <td>TYPESCRIPT</td>
     <td>GRAPHQL</td>
     <td>STYLED COMPONENTS</td>
+    <td>SWR</td>
   </tr>
 </table>
