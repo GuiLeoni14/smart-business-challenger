@@ -17,6 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
     AOS.init({
       once: true,
       duration: 600,
+      disable: 'mobile',
     })
     // eslint-disable-next-line
     ;() => AOS.refresh()
