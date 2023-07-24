@@ -29,6 +29,12 @@ export const Content = styled.div`
       margin-top: auto;
     }
   }
+  ${({ theme }) => theme.media.lg} {
+    grid-template-columns: 1fr;
+    & > .left {
+      display: none;
+    }
+  }
 `
 
 export const LoginContent = styled.div`
@@ -155,5 +161,11 @@ export const LoginContent = styled.div`
         text-decoration: underline;
       }
     }
+  }
+  ${({ theme }) => theme.media.lg} {
+    justify-content: center;
+    align-items: center;
+    max-width: 122.2rem;
+    padding: 6rem 2.4rem;
   }
 `

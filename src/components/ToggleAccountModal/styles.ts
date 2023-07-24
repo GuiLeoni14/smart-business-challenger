@@ -75,4 +75,16 @@ export const Content = styled(Dialog.Content)`
       opacity: 1;
     }
   }
+
+  ${({ theme }) => theme.media.lg} {
+    & > img:first-child {
+      display: none;
+    }
+    & > div {
+      max-width: 100%;
+      width: 100%;
+      text-align: center;
+      padding: 3.2rem;
+    }
+  }
 `
