@@ -1,12 +1,13 @@
 import * as S from './styles'
 import Image from 'next/image'
 import { Text } from '../../components/Text'
+import CountUp from 'react-countup'
 
 export function Results() {
   return (
     <S.Results>
       <S.ResultsContent>
-        <div className="left">
+        <div className="left" data-aos="fade-right">
           <Image
             src="/img/icons/icon_quote.svg"
             width={22}
@@ -39,10 +40,12 @@ export function Results() {
           </div>
         </div>
         <div className="right">
-          <div className="top">
+          <div className="top" data-aos="fade-down">
             <div>
               <Text size="text-5xl" weight="regular">
-                <strong>120</strong>
+                <strong>
+                  <CountUp end={120} />
+                </strong>
               </Text>
               <Text size="text-xl" weight="regular">
                 <span>Projeto realizado 2021</span>
@@ -50,7 +53,9 @@ export function Results() {
             </div>
             <div>
               <Text size="text-5xl" weight="regular">
-                <strong>12</strong>
+                <strong>
+                  <CountUp end={12} />
+                </strong>
               </Text>
               <Text size="text-xl" weight="regular">
                 <span>Escritórios no Brasil</span>
@@ -58,7 +63,9 @@ export function Results() {
             </div>
             <div>
               <Text size="text-5xl" weight="regular">
-                <strong>325m</strong>
+                <strong>
+                  <CountUp end={325} />m
+                </strong>
               </Text>
               <Text size="text-xl" weight="regular">
                 <span>Faturamento 2021</span>

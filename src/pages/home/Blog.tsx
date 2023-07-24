@@ -24,10 +24,10 @@ export function Blog() {
         <div className="top">
           <div>
             <Text size="text-base" weight="semi">
-              <span>Nosso blog</span>
+              <span data-aos="fade-down">Nosso blog</span>
             </Text>
             <Text size="text-4xl" weight="regular">
-              <h2>Notícias do mundo da tecnologia</h2>
+              <h2 data-aos="fade-right">Notícias do mundo da tecnologia</h2>
             </Text>
           </div>
           <Text size="text-lg" weight="semi">

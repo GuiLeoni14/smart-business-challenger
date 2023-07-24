@@ -8,10 +8,10 @@ export function About() {
       <S.AboutContent>
         <div className="left">
           <Text size="text-base" weight="semi">
-            <span>Sobre a empresa</span>
+            <span data-aos="fade-down">Sobre a empresa</span>
           </Text>
           <Text size="text-5xl" weight="regular">
-            <h2>Criando e inovando desde 1988</h2>
+            <h2 data-aos="fade-right">Criando e inovando desde 1988</h2>
           </Text>
           <div>
             <Text size="text-base" weight="regular">
@@ -53,14 +53,14 @@ export function About() {
         <div className="right">
           <Image src="/img/video.png" width={696} height={376} alt="" />
           <Text size="text-lg" weight="regular">
-            <p>
+            <p data-aos="fade-left">
               Suscipit pellentesque praesent auctor molestie massa nunc vitae.
               Felis eget est ut gravida in maecenas. Tempus in in in congue
               proin.
             </p>
           </Text>
           <Text size="text-lg" weight="regular">
-            <p>
+            <p data-aos="fade-left">
               Sem in feugiat id dui bibendum. Nunc ut mauris congue amet.
               Facilisis amet enim pellentesque eu suspendisse diam sit. Bibendum
               pharetra malesuada aliquam hendrerit consectetur neque.{' '}

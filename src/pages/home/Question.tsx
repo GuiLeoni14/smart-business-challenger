@@ -52,22 +52,24 @@ export function Question() {
         <div className="top">
           <div className="left">
             <Text size="text-base" weight="semi">
-              <span>Tire suas dúvidas</span>
+              <span data-aos="fade-down">Tire suas dúvidas</span>
             </Text>
             <Text size="text-4xl" weight="regular">
-              <h2>Perguntas mais frequentes</h2>
+              <h2 data-aos="fade-right">Perguntas mais frequentes</h2>
             </Text>
             <Text size="text-xl" weight="regular">
-              <p>
+              <p data-aos="fade-right">
                 Separamos algumas perguntas e respostas que podem te ajudar na
                 sua decisão
               </p>
             </Text>
             <Button>
-              <Link href="/login">Cadastrar meu negócio</Link>
+              <Link href="/login" data-aos="fade-up">
+                Cadastrar meu negócio
+              </Link>
             </Button>
             <Text>
-              <span>
+              <span data-aos="fade-up">
                 <Image
                   src="/img/icons/icon_phone.svg"
                   width={13}

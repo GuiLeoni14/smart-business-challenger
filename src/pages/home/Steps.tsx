@@ -53,12 +53,14 @@ export function Steps() {
     <S.Steps>
       <S.StepsContent>
         <Text size="text-base" weight="semi">
-          <span>Entenda como funciona</span>
+          <span data-aos="fade-down">Entenda como funciona</span>
         </Text>
         <div>
           <div className="left">
             <Text size="text-4xl" weight="regular">
-              <h2>Veja como aplicamos nossa metodologia</h2>
+              <h2 data-aos="fade-right">
+                Veja como aplicamos nossa metodologia
+              </h2>
             </Text>
             <div>
               <Image src="/img/sales.png" width={176} height={195} alt="" />

@@ -68,9 +68,14 @@ export const LoginContent = styled.div`
         font-size: 1.4rem;
         line-height: 2.1rem;
         border: 1.5px solid rgba(160, 170, 178, 0.4);
+        transition: all 0.2s;
 
         &::placeholder {
           ${({ theme }) => theme.colors['gray-50']};
+        }
+        &:hover,
+        &:focus {
+          border-color: ${({ theme }) => theme.colors['blue-500']};
         }
       }
       & > div:first-of-type {

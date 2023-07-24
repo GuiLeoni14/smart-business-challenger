@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Text } from '../../components/Text'
 import * as S from './styles'
 import { Button } from '../../components/Button'
+import { TypeAnimation } from 'react-type-animation'
 import Link from 'next/link'
 
 export function Hero() {
@@ -10,7 +11,7 @@ export function Hero() {
       <S.HeroContent>
         <div className="left">
           <Text weight="bold">
-            <span>
+            <span data-aos="fade-down">
               <Image
                 src="/img/icons/icon_world.svg"
                 width={32}
@@ -21,17 +22,30 @@ export function Hero() {
             </span>
           </Text>
           <Text size="text-6xl" weight="regular">
-            <h1>
-              O segredo para um negócio de <span>sucesso!</span>
+            <h1 data-aos="fade-right">
+              O segredo para um negócio de{' '}
+              <TypeAnimation
+                sequence={[
+                  'sucesso!',
+                  2000,
+                  'destaque!',
+                  2000,
+                  'impacto!',
+                  2000,
+                ]}
+                wrapper="span"
+                cursor={false}
+                repeat={Infinity}
+              />
             </h1>
           </Text>
           <Text size="text-xl" weight="regular">
-            <p>
+            <p data-aos="fade-right">
               Pellentesque rutrum turpis non est turpis pretium morbi urna. Erat
               dictum blandit aliquam purus sed rhoncus.
             </p>
           </Text>
-          <div>
+          <div data-aos="fade-up">
             <Button>
               <Link href="/login">Cadastrar meu negócio</Link>
             </Button>

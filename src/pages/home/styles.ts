@@ -57,6 +57,11 @@ export const HeroContent = styled(MainContainer)`
         align-items: center;
         justify-content: center;
         gap: 1.2rem;
+        transition: all 0.2s;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
     & > img:last-of-type {

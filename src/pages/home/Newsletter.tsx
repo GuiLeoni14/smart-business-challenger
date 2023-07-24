@@ -1,19 +1,17 @@
-import Link from 'next/link'
 import { Button } from '../../components/Button'
 import { Text } from '../../components/Text'
 import * as S from './styles'
 import Image from 'next/image'
-import * as Accordion from '@radix-ui/react-accordion'
 
 export function Newsletter() {
   return (
     <S.Newsletter>
       <S.NewsletterContent>
         <Text size="text-base" weight="semi">
-          <span>Newsletter</span>
+          <span data-aos="fade-down">Newsletter</span>
         </Text>
         <Text size="text-4xl" weight="regular">
-          <h2>Fique por dentro das novidades</h2>
+          <h2 data-aos="fade-down">Fique por dentro das novidades</h2>
         </Text>
         <Text size="text-base" weight="regular">
           <p>
