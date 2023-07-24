@@ -1,8 +1,6 @@
 import { Header } from '../../layout/Header'
 import * as S from './styles'
 import { Hero } from './Hero'
-import Image from 'next/image'
-import { Text } from '../../components/Text'
 import { Results } from './Results'
 import { About } from './About'
 import { Brands } from './Brands'
@@ -11,10 +9,18 @@ import { Blog } from './Blog'
 import { Question } from './Question'
 import { Newsletter } from './Newsletter'
 import { Footer } from '../../layout/Footer'
+import Head from 'next/head'
 
 export function Home() {
   return (
     <>
+      <Head>
+        <title>Smart Business</title>
+        <meta
+          name="description"
+          content="O segredo para um negócio de sucesso!"
+        />
+      </Head>
       <Header />
       <S.Container>
         <Hero />
