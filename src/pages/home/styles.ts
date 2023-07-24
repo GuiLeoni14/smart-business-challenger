@@ -1,4 +1,3 @@
-import { _FilterKind } from './../../graphql/generated'
 import styled from 'styled-components'
 import { MainContainer } from '../../styles/container'
 
